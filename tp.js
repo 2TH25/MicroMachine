@@ -1,7 +1,6 @@
- import Game from "./Game.js";
-
  let g = new Game();
  g.init();
+ 
 
 
     // la référence pour apprendre Javascript facilement : 

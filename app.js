@@ -1,6 +1,6 @@
 //alert("Hello World");
 
-export class Game {
+class Game {
 
     constructor() {
 
