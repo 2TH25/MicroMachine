@@ -69,7 +69,7 @@
         
         requestAnimationFrame(boucleDeJeu);
         Datenew = Date.now()
-        }
+    }
     
     
     /**
