@@ -31,13 +31,14 @@
     // clic sur la zone de jeu (coordonnées relatives au canvas)
     let clic = { x: 0, y: 0 };
         
+
+
     // initialisation (appelée au chargement du corps du document <body onload="init">)    
     function init() {
         // instanciation de la variable globale contenant le contexte
         context = document.getElementById("cvs").getContext("2d");
         context.width = document.getElementById("cvs").width;
         context.height = document.getElementById("cvs").height;
-
         rectangle.x = context.width/2 - rectangle.largeur/2
         rectangle.y = context.height/2 - rectangle.hauteur/2
         
@@ -65,6 +66,7 @@
         // rappel de la boucle de jeu 
         // requestAnimationFrame est une fonction JS servant à pré-calculer le prochain affichage
         //  http://www.html5canvastutorials.com/advanced/html5-canvas-animation-stage/
+        
         requestAnimationFrame(boucleDeJeu);
         Datenew = Date.now()
         }
@@ -223,4 +225,5 @@
         }
         return null
     }
+
 
