@@ -1,4 +1,9 @@
- 
+ import Game from "./Game.js";
+
+ let g = new Game();
+ g.init();
+
+
     // la référence pour apprendre Javascript facilement : 
     //    http://www.w3schools.com/js/default.asp
     // le code ci-dessous contient les références aux pages concernées de ce site
