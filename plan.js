@@ -2,8 +2,8 @@ class Plan {
     constructor(){
         obstacles=[];
         vehicules=[];
-        longueur=200;
-        largeur=200;
+        longueur=800;
+        largeur=800;
     }
     
 }
