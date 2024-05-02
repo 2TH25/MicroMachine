@@ -1,9 +1,9 @@
 class Plan {
     constructor(){
-        obstacles=[];
-        vehicules=[];
-        longueur=800;
-        largeur=800;
+        this.obstacles==[];
+        this.vehicules=[];
+        this.longueur=800;
+        this.largeur=800;
     }
     
 }
