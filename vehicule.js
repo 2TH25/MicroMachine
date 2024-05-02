@@ -2,13 +2,14 @@
 
 
 class Vehicule {
-    couleur; //entier
-    p; //type Position
-    vitesse; //décimal
-    nbtour; //entier
-    checkpoint;//entier
+    
 
     constructor() {
+        this.position={x:0,y:0};
+        couleur; //entier
+        vitesse; //décimal
+        nbtour; //entier
+        checkpoint;//entier
 
     }
 

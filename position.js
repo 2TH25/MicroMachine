@@ -1,4 +1,0 @@
-class Position{
-x;
-y;
-}
