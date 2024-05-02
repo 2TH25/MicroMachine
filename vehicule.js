@@ -1,6 +1,5 @@
 
 
-const size = 8;
 
 class Vehicule {
     couleur; //entier
