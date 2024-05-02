@@ -7,9 +7,9 @@ class Vehicule {
     constructor() {
         this.position={x:0,y:0};
         couleur; //entier
-        vitesse; //décimal
-        nbtour; //entier
-        checkpoint;//entier
+        vitesse=0; //décimal
+        nbtour=0; //entier
+        checkpoint=0;//entier
 
     }
 
