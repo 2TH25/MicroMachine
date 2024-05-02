@@ -6,6 +6,7 @@ class Vehicule {
 
     init() {
         yo
+        
     }
 }
 
