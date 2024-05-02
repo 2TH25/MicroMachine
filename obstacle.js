@@ -1,10 +1,12 @@
-Class Obsctacle{
-
-    position;
-    longueur;
-    largeur;
-    type;
-    numero;
+class Obsctacle{
+    constructor(){
+        position;
+        longueur;
+        largeur;
+        type;
+        numero;
+    }
+   
 
 
 

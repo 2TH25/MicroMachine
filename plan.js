@@ -1,6 +1,8 @@
 class Plan {
-    obs=[];
-    vehi=[];
-    longueur;
-    largeur;
+    constructor(){
+        obstacles=[];
+        vehicules=[];
+        longueur;
+        largeur;
+    }
 }
