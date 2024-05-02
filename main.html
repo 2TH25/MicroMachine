@@ -14,13 +14,6 @@
         context = document.getElementById("cvs").getContext("2d");
         context.width = document.getElementById("cvs").width;
         context.height = document.getElementById("cvs").height;
-        rectangle.x = context.width/2 - rectangle.largeur/2
-        rectangle.y = context.height/2 - rectangle.hauteur/2
-        
-        tabObstacles = creeObstacle()
-        // on associe au document des écouteurs d'événements
-        // --> voir http://www.w3schools.com/js/js_events.asp
-        
         // 2 écouteurs pour le clavier (appui/relâchement d'une touche)
         document.addEventListener("keydown", captureAppuiToucheClavier)
         document.addEventListener("keyup", captureRelacheToucheClavier)
@@ -30,6 +23,14 @@
                         
         // lancement de la boucle de jeu,
         boucleDeJeu();
+    }
+
+
+
+    function boucleDeJeu() {
+        // mise à jour de l'état du jeu
+        update(Date.now()-Datenew); 
+        Datenew = Date.now()
     }
 
 
