@@ -14,23 +14,6 @@
         context = document.getElementById("cvs").getContext("2d");
         context.width = document.getElementById("cvs").width;
         context.height = document.getElementById("cvs").height;
-        // 2 écouteurs pour le clavier (appui/relâchement d'une touche)
-        document.addEventListener("keydown", captureAppuiToucheClavier)
-        document.addEventListener("keyup", captureRelacheToucheClavier)
-        // on associe au document un écouteur d'événements souris
-        document.addEventListener("click", captureClicSouris)
-        // --> ces événements vont appeler les fonctions captureXYZ définies après.
-                        
-        // lancement de la boucle de jeu,
-        boucleDeJeu();
-    }
-
-
-
-    function boucleDeJeu() {
-        // mise à jour de l'état du jeu
-        update(Date.now()-Datenew); 
-        Datenew = Date.now()
     }
 
 
