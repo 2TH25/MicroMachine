@@ -7,9 +7,30 @@
     <script src="obstacle.js"></script>
     <script src="plan.js"></script>
     <script src="vehicule.js"></script>
-    
+
     <script>
+    function init() {
+        // instanciation de la variable globale contenant le contexte
+        context = document.getElementById("cvs").getContext("2d");
+        context.width = document.getElementById("cvs").width;
+        context.height = document.getElementById("cvs").height;
+        rectangle.x = context.width/2 - rectangle.largeur/2
+        rectangle.y = context.height/2 - rectangle.hauteur/2
         
+        tabObstacles = creeObstacle()
+        // on associe au document des écouteurs d'événements
+        // --> voir http://www.w3schools.com/js/js_events.asp
+        
+        // 2 écouteurs pour le clavier (appui/relâchement d'une touche)
+        document.addEventListener("keydown", captureAppuiToucheClavier)
+        document.addEventListener("keyup", captureRelacheToucheClavier)
+        // on associe au document un écouteur d'événements souris
+        document.addEventListener("click", captureClicSouris)
+        // --> ces événements vont appeler les fonctions captureXYZ définies après.
+                        
+        // lancement de la boucle de jeu,
+        boucleDeJeu();
+    }
 
 
     const nombrevoitures = 1;
