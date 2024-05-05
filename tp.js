@@ -1,7 +1,3 @@
-let g = new Game();
-g.init();
-
-
 
 // la référence pour apprendre Javascript facilement : 
 //    http://www.w3schools.com/js/default.asp
