@@ -2,7 +2,8 @@ function init() {
     context = document.getElementById("cvs").getContext("2d");
     context.width = document.getElementById("cvs").width;
     context.height = document.getElementById("cvs").height;
-    Plan = new Plan()
+    plan = new Plan()
+    document.body.appendChild(plan.image)
 }
 
 
