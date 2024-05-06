@@ -3,6 +3,7 @@ let context = null;
 let clic = { x: 0, y: 0 };
 
 let plateau = new Plan();
+let vehicule1 = new Vehicule()
 
 // const nombrevoitures = 1;
 // const Checkpoints=[];
@@ -20,8 +21,6 @@ function init() {
     document.addEventListener("keyup", captureRelacheToucheClavier)
 
     
-
-    rectangle = {x: 375, y: 375, rotation: 0.25}
     
 
     boucleDeJeu();
@@ -41,6 +40,7 @@ function boucleDeJeu() {
 
 function update(dt) {
     
+    vehicule1.update(dt)
 
     
 }
@@ -52,14 +52,8 @@ function render() {
 
     context.drawImage(plateau.image,0,0)
 
-    context.save()
+    vehicule1.render(context)
 
-    context.translate(rectangle.x + 25,rectangle.y + 25)
-    context.rotate(Math.PI*rectangle.rotation)
-    
-    context.fillRect(-25,-25,50,50);
-
-    context.restore()
     
 }
 
@@ -67,16 +61,16 @@ function captureAppuiToucheClavier(event) {
     // pratique pour connaître les keyCode des touches du clavier :
     //  --> http://www.cambiaresearch.com/articles/15/javascript-key-codes
     if (event.code == "ArrowUp"){
-        
+        vehicule1.setSpeed(1)
     }
     if (event.code == "ArrowDown"){
-        
+        vehicule1.setSpeed(-1)
     }
     if (event.code == "ArrowLeft"){
-        
+        vehicule1.tourner(-1)
     }
     if (event.code == "ArrowRight"){
-        
+        vehicule1.tourner(1)
 
     }
 
@@ -84,15 +78,15 @@ function captureAppuiToucheClavier(event) {
 
 function captureRelacheToucheClavier(event) {
     if (event.code == "ArrowUp"){
-        
+        vehicule1.setSpeed(0)
     }
     if (event.code == "ArrowDown"){
-        
+        vehicule1.setSpeed(0)
     }
     if (event.code == "ArrowLeft"){
-        
+        vehicule1.tourner(0)
     }
     if (event.code == "ArrowRight"){
-        
+        vehicule1.tourner(0)
     }
 }
