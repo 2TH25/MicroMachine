@@ -3,12 +3,13 @@ let clic = { x: 0, y: 0 };
 
 let plateau = new Plan();
 let vehicule1 = new Vehicule()
-//let checpoint1 = new Checkpoint();
-//checkpoint1.numero=1;
+let checkpoint1 = new Checkpoint();
+checkpoint1.numero=1;
 
-//let obstacle_ralentissement1 = new ObstacleRalentissement();
+let obstacle_ralentissement1 = new ObstacleRalentissement();
 
-//let obstacle_rebond1 = new ObstacleRebond();
+let obstacle_rebond1 = new ObstacleRebond();
+obstacle_rebond1.position={x:200,y:200};
 
 // const nombrevoitures = 1;
 // const Checkpoints=[];

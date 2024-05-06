@@ -41,7 +41,7 @@ class Vehicule {
     }
 
     setSpeed(a){
-        this.vitesse = a * 0.5
+        this.vitesse = a * 0.65
     }
 
 }
