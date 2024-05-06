@@ -9,6 +9,7 @@ checkpoint1.numero=1;
 let obstacle_ralentissement1 = new ObstacleRalentissement();
 
 let obstacle_rebond1 = new ObstacleRebond();
+obstacle_rebond1.position={x:200,y:200};
 
 // const nombrevoitures = 1;
 // const Checkpoints=[];
