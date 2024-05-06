@@ -9,7 +9,7 @@ class Vehicule {
         this.angle = 0; //degrée
         this.couleur = 0; //entier
         this.vitesse = 0; //décimal
-        this.angularSpead = 0;
+        this.angularSpeed = 0;
         this.nbtour = 0; //entier
         this.checkpoint = 0;//entier
 
@@ -17,7 +17,7 @@ class Vehicule {
 
     update(dt){
 
-        this.angle += this.angularSpead * dt;
+        this.angle += this.angularSpeed * dt;
         this.position.x += Math.cos(this.angle * Math.PI/180) * this.vitesse * dt
         this.position.y += Math.sin(this.angle * Math.PI/180) * this.vitesse * dt
 
@@ -34,7 +34,7 @@ class Vehicule {
     }
 
     tourner(a){
-        this.angularSpead = a * 0.2
+        this.angularSpeed = a * 0.2
     }
 
     setSpeed(a){
