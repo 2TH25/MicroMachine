@@ -1,0 +1,3 @@
+class ObstacleRalentissement extends Obstacle {
+    
+}
