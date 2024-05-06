@@ -1,5 +1,6 @@
 class Checkpoint extends Obstacle {
     constructor(){
-        this.numero;
+        super();
+        this.numero=0;
     }
 }
