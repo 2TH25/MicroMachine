@@ -9,7 +9,7 @@ class ObstacleRebond extends Obstacle {
         var context = canvas.getContext("2d");
         context.beginPath();
         context.fillStyle="#FF4422";
-        context.arc(80, 80, 70, 0, 2 * Math.PI);
+        context.arc(80, 80,this.position.x,this.position.y, 2 * Math.PI);
         context.fill();
 }
 
