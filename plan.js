@@ -1,11 +1,11 @@
 class Plan {
     constructor(){
-        this.image = document.createElement("img")
-        this.image.src = "ImagePlan.avif"
-        this.obstacles=[];
-        this.vehicules=[];
-        this.longueur=800;
-        this.largeur=800;
+        this.image = new Image()
+        this.image.src = "ImagePlan.jpg"
+        this.obstacles = [];
+        this.vehicules = [];
+        this.longueur = 800;
+        this.largeur = 800;
     }
     
 }

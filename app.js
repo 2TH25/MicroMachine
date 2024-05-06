@@ -9,9 +9,6 @@ let clic = { x: 0, y: 0 };
 // const nombreObstacleRebondissement=10;
 // const deltaT=0;
 
-let image = new Image()
-image.src = "ImagePlan.avif"
-
 function init() {
     context = document.getElementById("cvs").getContext("2d");
     context.width = document.getElementById("cvs").width;
@@ -45,6 +42,7 @@ function update(dt) {
 }
 
 function render() {
+    
     context.clearRect(0, 0, context.width, context.height);
     context.fillStyle = "red"
 
