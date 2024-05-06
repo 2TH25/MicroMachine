@@ -1,4 +1,4 @@
-class Obsctacle{
+class Obstacle {
 
     constructor(){
         this.position;
@@ -8,3 +8,8 @@ class Obsctacle{
 
    
 }
+
+
+
+
+
