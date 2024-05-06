@@ -3,7 +3,7 @@ class Vehicule {
     
 
     constructor() {
-        this.position = {x:375,y:375}; 
+        this.position = {x:400,y:400}; 
         this.largeur = 50;
         this.longueur = 50;
         this.angle = 0; //degrée
@@ -26,8 +26,9 @@ class Vehicule {
     render(context){
 
         context.save()
+        
         context.fillStyle = "red"
-        context.translate(this.position.x,this.position.y)
+        context.translate(400,400)
         context.rotate(this.angle * Math.PI/180)
         context.fillRect(-this.longueur/2,-this.largeur/2,this.longueur,this.largeur)
         context.restore()

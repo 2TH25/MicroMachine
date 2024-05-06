@@ -48,11 +48,10 @@ function update(dt) {
 function render() {
 
     context.clearRect(0, 0, context.width, context.height);
-    context.fillStyle = "red"
 
-    context.drawImage(plateau.image,0,0)
-
-    vehicule1.render(context)
+    plateau.render(context,vehicule1.position.x-400,vehicule1.position.y-400);
+    
+    vehicule1.render(context);
 
     
 }
