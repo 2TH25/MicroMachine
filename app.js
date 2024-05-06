@@ -1,5 +1,4 @@
 let context = null;
-
 let clic = { x: 0, y: 0 };
 
 let plateau = new Plan();
