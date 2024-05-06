@@ -3,9 +3,8 @@ class Obsctacle{
         this.position;
         this.longueur;
         this.largeur;
-        this.type;
-        this.numero;
     }
+
    
 
 
