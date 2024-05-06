@@ -1,5 +1,7 @@
-class ObstacleRebond extends obstacle{
+class ObstacleRebond extends Obstacle{
 
-
+    constructor{
+        this.vitesseRebond = 
+    }
 
 }
