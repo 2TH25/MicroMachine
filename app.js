@@ -9,7 +9,8 @@ let clic = { x: 0, y: 0 };
 // const nombreObstacleRebondissement=10;
 // const deltaT=0;
 
-
+let image = new Image()
+image.src = "ImagePlan.avif"
 
 function init() {
     context = document.getElementById("cvs").getContext("2d");
@@ -19,7 +20,7 @@ function init() {
     document.addEventListener("keydown", captureAppuiToucheClavier)
     document.addEventListener("keyup", captureRelacheToucheClavier)
 
-    rectangle = {x: 0, y: 0, rotation: 0.25}
+    rectangle = {x: 375, y: 375, rotation: 0.25}
     
 
     boucleDeJeu();
@@ -47,12 +48,14 @@ function render() {
     context.clearRect(0, 0, context.width, context.height);
     context.fillStyle = "red"
 
+    context.drawImage(image,0,0)
+
     context.save()
 
     context.translate(rectangle.x + 25,rectangle.y + 25)
     context.rotate(Math.PI*rectangle.rotation)
     
-    context.fillRect(-25,-25,80,50);
+    context.fillRect(-25,-25,50,50);
 
     context.restore()
     
