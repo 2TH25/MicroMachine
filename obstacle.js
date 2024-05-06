@@ -1,10 +1,10 @@
 class Obsctacle{
     constructor(){
-        position;
-        longueur;
-        largeur;
-        type;
-        numero;
+        this.position;
+        this.longueur;
+        this.largeur;
+        this.type;
+        this.numero;
     }
    
 
