@@ -1,4 +1,5 @@
 class Obsctacle{
+
     constructor(){
         this.position;
         this.longueur;
@@ -6,7 +7,4 @@ class Obsctacle{
     }
 
    
-
-
-
 }
