@@ -28,6 +28,7 @@ function init() {
 
     
     
+    
 
     boucleDeJeu();
 }
