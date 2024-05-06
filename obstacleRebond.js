@@ -1,4 +1,4 @@
-class ObstacleRebond extends obstacle{
+class ObstacleRebond extends Obstacle{
     constructor(){
 
     }
