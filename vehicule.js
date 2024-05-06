@@ -35,7 +35,7 @@ class Vehicule {
     }
 
     tourner(a){
-        this.angularSpeed = a * 0.2
+        this.angularSpeed = a * 0.15
     }
 
     setSpeed(a){
