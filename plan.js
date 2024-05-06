@@ -1,4 +1,6 @@
 class Plan {
+
+    
     constructor(){
         this.image = new Image();
         this.image.src = "ImagePlan.jpg";

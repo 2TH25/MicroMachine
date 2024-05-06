@@ -2,6 +2,8 @@ let context = null;
 
 let clic = { x: 0, y: 0 };
 
+let plateau = new Plan();
+
 // const nombrevoitures = 1;
 // const Checkpoints=[];
 // const vitesserotation=0;
@@ -16,6 +18,8 @@ function init() {
 
     document.addEventListener("keydown", captureAppuiToucheClavier)
     document.addEventListener("keyup", captureRelacheToucheClavier)
+
+    
 
     rectangle = {x: 375, y: 375, rotation: 0.25}
     
@@ -42,11 +46,11 @@ function update(dt) {
 }
 
 function render() {
-    
+
     context.clearRect(0, 0, context.width, context.height);
     context.fillStyle = "red"
 
-    context.drawImage(image,0,0)
+    context.drawImage(plateau.image,0,0)
 
     context.save()
 
