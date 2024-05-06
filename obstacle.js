@@ -5,5 +5,6 @@ class Obsctacle{
         this.longueur;
         this.largeur;
     }
+
    
 }
