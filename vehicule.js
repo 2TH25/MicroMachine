@@ -5,9 +5,9 @@ class Vehicule {
     constructor() {
         this.image = new Image()
         this.image.src = "Vehicule1.png"
-        this.position = {x:5670,y:1875};  // x:1660,y:603  pour la voiture 2
-        this.hauteur = this.image.height*4;
-        this.longueur = this.image.width*4;
+        this.position = {x:0,y:0};  // x:1660,y:603  pour la voiture 2
+        this.hauteur = this.image.height;
+        this.longueur = this.image.width;
         this.angle = 0; //degrée
         this.couleur = 0; //entier
         this.vitesse = 0; //décimal

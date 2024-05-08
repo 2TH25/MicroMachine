@@ -11,7 +11,7 @@ class Plan {
     }
 
     render(context,x,y){
-        context.drawImage(this.image,-x,-y,this.image.width*4,this.image.height*4)
+        context.drawImage(this.image,-x,-y,this.image.width,this.image.height)
     }
     
 }
