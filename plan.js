@@ -3,11 +3,11 @@ class Plan {
 
     constructor(){
         this.image = new Image();
-        this.image.src = "Circuit.png";
+        this.image.src = "Circuit2.png";
         this.obstacles = [];
         this.vehicules = [];
-        this.longueur = 800;
-        this.largeur = 800;
+        this.longueur = 1920;
+        this.largeur = 1080;
     }
 
     render(context,x,y){

@@ -4,10 +4,10 @@ class Vehicule {
 
     constructor() {
         this.image = new Image()
-        this.image.src = "Voiture1.png"
-        this.position = {x:400,y:400}; 
-        this.hauteur = this.image.height*0.2;
-        this.longueur = this.image.width*0.2;
+        this.image.src = "Vehicule1.png"
+        this.position = {x:1660,y:653};  // x:1660,y:603  pour la voiture 2
+        this.hauteur = this.image.height*4;
+        this.longueur = this.image.width*4;
         this.angle = 0; //degrée
         this.couleur = 0; //entier
         this.vitesse = 0; //décimal
@@ -30,7 +30,7 @@ class Vehicule {
         context.save()
         
         context.fillStyle = "red"
-        context.translate(400,400)
+        context.translate(960,540)
         context.rotate(this.angle * Math.PI/180)
         context.drawImage(this.image,-this.longueur/2,-this.hauteur/2,this.longueur,this.hauteur)
         context.restore()
