@@ -5,7 +5,7 @@ class Vehicule {
     constructor() {
         this.image = new Image()
         this.image.src = "Vehicule1.png"
-        this.position = {x:1660,y:653};  // x:1660,y:603  pour la voiture 2
+        this.position = {x:5670,y:1875};  // x:1660,y:603  pour la voiture 2
         this.hauteur = this.image.height*4;
         this.longueur = this.image.width*4;
         this.angle = 0; //degrée

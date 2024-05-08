@@ -6,8 +6,8 @@ class Plan {
         this.image.src = "Circuit2.png";
         this.obstacles = [];
         this.vehicules = [];
-        this.longueur = 1920;
-        this.largeur = 1080;
+        this.longueur = this.image.height;
+        this.largeur = this.image.width;
     }
 
     render(context,x,y){

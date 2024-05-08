@@ -56,7 +56,7 @@ function render() {
 
     context.clearRect(0, 0, context.width, context.height);
 
-    plateau.render(context,vehicule1.position.x-400,vehicule1.position.y-400);
+    plateau.render(context,vehicule1.position.x,vehicule1.position.y);
     
     vehicule1.render(context);
 
