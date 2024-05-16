@@ -21,9 +21,9 @@ class Plan {
     }
 
     creerCheckpoint(){
-        let ch1 = new Checkpoint(5830,1872,100,100,0,0);
+        ch1 = new Checkpoint(5830,1872,100,100,0,0);
         this.obstacles = this.obstacles + [ch1]
-        let ch2 = new Checkpoint(5930,1872,100,100,0,1);
+        ch2 = new Checkpoint(5930,1872,100,100,0,1);
         this.obstacles = this.obstacles + [ch2]
         ch3 = new Checkpoint(6030,1872,100,100,0,2);
         this.obstacles = this.obstacles + [ch3]
