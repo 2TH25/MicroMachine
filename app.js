@@ -6,6 +6,7 @@ plateau.creerVehicule(1)
 
 let time = new Timer(50,90,0)
 
+plateau.creerCheckpoint();
 
 function init() {
     context = document.getElementById("cvs").getContext("2d");
