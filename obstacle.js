@@ -8,7 +8,6 @@ class Obstacle {
         this.largeur=largeur;
         this.orientation=orientation;
     }
-
 }
 
 
