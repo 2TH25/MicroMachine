@@ -1,17 +1,15 @@
 class Obstacle {
 
-    constructor(posX,posY,longueur,largeur,orientation,source){
-        this.image=new Image()
-        this.image.src = source
+    constructor(posX,posY,longueur,largeur,itBox){
         this.position={x:posX, y: posY};
         this.longueur=longueur;
         this.largeur=largeur;
-        this.orientation=orientation;
+        this.itBox=itBox;
     }
 
 
-    render(context,x,y){
-        context.drawImage(this.image,-x,-y,this.image.width,this.image.height)
+    render(context){
+
     }
 }
 

@@ -48,11 +48,13 @@ function render() {
     context.clearRect(0, 0, context.width, context.height);
 
 
-    plateau.render(context,plateau.vehicules[0].position.x,plateau.vehicules[0].position.y);
+    plateau.render(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540);
     
     for(let i=0;i<plateau.vehicules.length;i++){
         plateau.vehicules[i].render(context);
     }
+
+    plateau.renderObstacle(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540)
 
     time.render(context)
 

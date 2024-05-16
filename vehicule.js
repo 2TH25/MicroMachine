@@ -6,7 +6,7 @@ class Vehicule {
         this.image = new Image()
         if (x == 0){
             this.image.src = "Voiture1.png"
-            this.position = {x:5630,y:1872}; // x:1660,y:603  pour la voiture 2
+            this.position = {x:6590,y:2412}; // x:1660,y:603  pour la voiture 2
         } else {
             this.image.src = "Voiture2.png"
             this.position = {x:5630,y:1972};
