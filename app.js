@@ -3,20 +3,9 @@ let clic = { x: 0, y: 0 };
 
 let plateau = new Plan();
 plateau.creerVehicule(1)
-let checkpoint1 = new Checkpoint();
-checkpoint1.numero=1;
 
-let obstacle_ralentissement1 = new ObstacleRalentissement();
+let time = new Timer(50,90,0)
 
-let obstacle_rebond1 = new ObstacleRebond();
-obstacle_rebond1.position={x:450,y:400};
-
-// const nombrevoitures = 1;
-// const Checkpoints=[];
-// const vitesserotation=0;
-// const nombreObstacleRalentissement=10;
-// const nombreObstacleRebondissement=10;
-// const deltaT=0;
 
 function init() {
     context = document.getElementById("cvs").getContext("2d");
@@ -48,6 +37,7 @@ function boucleDeJeu() {
 function update(dt) {
     
     plateau.vehicules[0].update(dt)
+    time.update(dt)
 
     
 }
@@ -56,11 +46,14 @@ function render() {
 
     context.clearRect(0, 0, context.width, context.height);
 
+
     plateau.render(context,plateau.vehicules[0].position.x,plateau.vehicules[0].position.y);
     
     for(let i=0;i<plateau.vehicules.length;i++){
         plateau.vehicules[i].render(context);
     }
+
+    time.render(context)
 
     
 }
