@@ -1,24 +1,23 @@
 class ObstacleRebond extends Obstacle {
     constructor(){
-        super();
+        this.image = new Image()
+            this.image.src = ""
+            this.position = {x:5930,y:1872};
+            this.longueur=100;
+            this.largeur=100;
+
+
+
+
+        
+        
+            
+            
+
     }
+
+
 
     
-    fillCircle(){
-        var canvas = document.getElementById("canvas2");
-        var context = canvas.getContext("2d");
-        context.beginPath();
-        context.fillStyle="#FF4422";
-        context.arc(80, 80,this.position.x,this.position.y, 2 * Math.PI);
-        context.fill();
-}
-
-    render(context){
-
-        context.save();
-        
-        context.fillStyle = "blue";
-        this.fillCircle();
-        context.restore();
-    }
+    
 }
