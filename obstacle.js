@@ -8,6 +8,11 @@ class Obstacle {
         this.largeur=largeur;
         this.orientation=orientation;
     }
+
+
+    render(context,x,y){
+        context.drawImage(this.image,-x,-y,this.image.width,this.image.height)
+    }
 }
 
 
