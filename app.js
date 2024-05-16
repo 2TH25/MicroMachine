@@ -3,7 +3,6 @@ let clic = { x: 0, y: 0 };
 
 let plateau = new Plan();
 plateau.creerVehicule(1)
-
 plateau.creerCheckpoint();
 
 let obstacle_ralentissement1 = new ObstacleRalentissement();
