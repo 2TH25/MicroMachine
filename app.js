@@ -59,7 +59,7 @@ function render() {
     plateau.render(context,plateau.vehicules[0].position.x,plateau.vehicules[0].position.y);
     
     for(let i=0;i<plateau.vehicules.length;i++){
-        plateau.vehicules[i].render();
+        plateau.vehicules[i].render(context);
     }
 
     
