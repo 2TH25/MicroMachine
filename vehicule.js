@@ -2,12 +2,17 @@
 class Vehicule {
     
 
-    constructor() {
+    constructor(x) {
         this.image = new Image()
-        this.image.src = "Voiture1.png"
-        this.position = {x:5630,y:1872};  // x:1660,y:603  pour la voiture 2
-        this.hauteur = this.image.height*4;
-        this.longueur = this.image.width*4;
+        if (x == 1){
+            this.image.src = "Voiture1.png"
+            this.position = {x:5630,y:1872}; // x:1660,y:603  pour la voiture 2
+        } else {
+            this.image.src = "Voiture2.png"
+            this.position = {x:5630,y:1972};
+        }
+        this.hauteur = this.image.height;
+        this.longueur = this.image.width;
         this.angle = 0; //degrée
         this.couleur = 0; //entier
         this.vitesse = 0; //décimal

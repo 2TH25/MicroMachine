@@ -3,7 +3,7 @@ class Plan {
 
     constructor(){
         this.image = new Image();
-        this.image.src = "Circuit2.png";
+        this.image.src = "Circuit.png";
         this.obstacles = [];
         this.vehicules = [];
         this.longueur = this.image.height;
@@ -11,7 +11,13 @@ class Plan {
     }
 
     render(context,x,y){
-        context.drawImage(this.image,-x,-y,this.image.width*4,this.image.height*4)
+        context.drawImage(this.image,-x,-y,this.image.width,this.image.height)
     }
     
+    creerVehicule(x){
+        for(let i=0;i<x;i++){
+            this.vehicules[i] = new Vehicule(i)
+        }
+    }
+
 }

@@ -2,7 +2,7 @@ let context = null;
 let clic = { x: 0, y: 0 };
 
 let plateau = new Plan();
-let vehicule1 = new Vehicule()
+plateau.creerVehicule(1)
 let checkpoint1 = new Checkpoint();
 checkpoint1.numero=1;
 
@@ -47,7 +47,7 @@ function boucleDeJeu() {
 
 function update(dt) {
     
-    vehicule1.update(dt)
+    plateau.vehicules[0].update(dt)
 
     
 }
@@ -56,9 +56,11 @@ function render() {
 
     context.clearRect(0, 0, context.width, context.height);
 
-    plateau.render(context,vehicule1.position.x,vehicule1.position.y);
+    plateau.render(context,plateau.vehicules[0].position.x,plateau.vehicules[0].position.y);
     
-    vehicule1.render(context);
+    for(let i=0;i<plateau.vehicules.length;i++){
+        plateau.vehicules[i].render();
+    }
 
     
 }
@@ -67,16 +69,16 @@ function captureAppuiToucheClavier(event) {
     // pratique pour connaître les keyCode des touches du clavier :
     //  --> http://www.cambiaresearch.com/articles/15/javascript-key-codes
     if (event.code == "ArrowUp"){
-        vehicule1.setSpeed(1)
+        plateau.vehicules[0].setSpeed(1)
     }
     if (event.code == "ArrowDown"){
-        vehicule1.setSpeed(-1)
+        plateau.vehicules[0].setSpeed(-1)
     }
     if (event.code == "ArrowLeft"){
-        vehicule1.tourner(-1)
+        plateau.vehicules[0].tourner(-1)
     }
     if (event.code == "ArrowRight"){
-        vehicule1.tourner(1)
+        plateau.vehicules[0].tourner(1)
 
     }
 
@@ -84,15 +86,15 @@ function captureAppuiToucheClavier(event) {
 
 function captureRelacheToucheClavier(event) {
     if (event.code == "ArrowUp"){
-        vehicule1.setSpeed(0)
+        plateau.vehicules[0].setSpeed(0)
     }
     if (event.code == "ArrowDown"){
-        vehicule1.setSpeed(0)
+        plateau.vehicules[0].setSpeed(0)
     }
     if (event.code == "ArrowLeft"){
-        vehicule1.tourner(0)
+        plateau.vehicules[0].tourner(0)
     }
     if (event.code == "ArrowRight"){
-        vehicule1.tourner(0)
+        plateau.vehicules[0].tourner(0)
     }
 }
