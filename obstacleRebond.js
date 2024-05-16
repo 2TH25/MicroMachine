@@ -1,14 +1,9 @@
 
 class ObstacleRebond extends Obstacle {
-    constructor(){
-        super();
-            
+
+    constructor(posX,posY,longueur,largeur,orientation){
+        super(posX,posY,longueur,largeur,orientation)
 
     }
-
-    
-
-
-    
-    
+ 
 }

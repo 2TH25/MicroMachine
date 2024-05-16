@@ -1,7 +1,7 @@
 class ObstacleRalentissement extends Obstacle {
-    constructor(){
-        super();
-        this.vitesseRalentissement=0.5;
+    constructor(posX,posY,longueur,largeur,orientation,puissanceRalentissement){
+        super(posX,posY,longueur,largeur,orientation);
+        this.puissanceRalentissement=puissanceRalentissement;
     }
 
 }
