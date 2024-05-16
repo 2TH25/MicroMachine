@@ -3,37 +3,37 @@ class Checkpoint extends Obstacle {
     constructor(n){
         switch (n) {
             case 0:
-                super(0,0,50,50,null)
+                super(6900,2500,500,500,null)
                 break;
             case 1:
-                super(0,100,50,50,null)
+                super(11200,4000,500,500,null)
                 break;
             case 2:
-                super(0,200,50,50,null)
+                super(7600,3200,400,400,null)
                 break;
             case 3:
-                super(0,300,50,50,null)
+                super(8500,4800,400,400,null)
                 break;
             case 4:
-                super(0,400,50,50,null)
+                super(7700,6100,400,400,null)
                 break;
             case 5:
-                super(0,500,50,50,null)
+                super(6950,5450,400,400,null)
                 break;
             case 6:
-                super(100,0,50,50,null)
+                super(6150,5500,400,400,null)
                 break;
             case 7:
-                super(100,100,50,50,null)
+                super(6970,4250,500,500,null)
                 break;
             case 8:
-                super(100,200,50,50,null)
+                super(5200,4700,500,500,null)
                 break;
             case 9:
-                super(100,300,50,50,null)
+                super(5250,3400,500,500,null)
                 break;
             case 10:
-                super(100,400,50,50,null)
+                super(4100,3000,500,500,null)
                 break;
         
             default:
@@ -44,12 +44,8 @@ class Checkpoint extends Obstacle {
     }
 
     render(context,x,y){
-        context.save()
-        context.fillStyle = "red"
-        context.fillRect(-x+this.position.x,-y+this.position.y,this.longueur,this.largeur)
-        context.restore()
+        
     }
-
     
     
 }

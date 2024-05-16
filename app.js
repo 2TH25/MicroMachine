@@ -49,14 +49,17 @@ function render() {
 
 
     plateau.render(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540);
+
+    plateau.renderObstacle(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540)
+
+    time.render(context)
     
     for(let i=0;i<plateau.vehicules.length;i++){
         plateau.vehicules[i].render(context);
     }
 
-    plateau.renderObstacle(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540)
-
-    time.render(context)
+    context.font = "50px Arial "
+    context.fillText("x : "+Math.floor(plateau.vehicules[0].position.x)+" y : "+Math.floor(plateau.vehicules[0].position.y),1500,90)
 
     
 }
