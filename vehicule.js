@@ -33,8 +33,6 @@ class Vehicule {
     render(context){
 
         context.save()
-        
-        context.fillStyle = "red"
         context.translate(960,540)
         context.rotate(this.angle * Math.PI/180)
         context.drawImage(this.image,-this.longueur/2,-this.hauteur/2,this.longueur,this.hauteur)
