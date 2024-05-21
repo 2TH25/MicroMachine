@@ -7,10 +7,14 @@ class Obstacle {
         this.itBox=itBox;
     }
 
-
     render(context){
 
     }
+
+    estEnColision(vehicule){
+
+    }
+
 }
 
 

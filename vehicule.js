@@ -19,6 +19,7 @@ class Vehicule {
         this.angularSpeed = 0;
         this.nbtour = 0; //entier
         this.checkpoint = 0;//entier
+        this.itBox = [{x:10,y:0,r:50}]
 
     }
 
@@ -27,6 +28,11 @@ class Vehicule {
         this.angle += this.angularSpeed * dt;
         this.position.x += Math.cos(this.angle * Math.PI/180) * this.vitesse * dt
         this.position.y += Math.sin(this.angle * Math.PI/180) * this.vitesse * dt
+        // for (let i=0;i<this.itBox.length;i++){
+        //     this.itBox[i].x += Math.cos(this.angle * Math.PI/180) * this.vitesse * dt
+        //     this.itBox[i].y += Math.sin(this.angle * Math.PI/180) * this.vitesse * dt
+        // }
+
 
     }
 
@@ -36,6 +42,11 @@ class Vehicule {
         context.translate(960,540);
         context.rotate(this.angle * Math.PI/180);
         context.drawImage(this.image,-this.longueur/2,-this.hauteur/2,this.longueur,this.hauteur);
+        context.beginPath();
+        context.fillStyle = "red"
+        context.arc(this.itBox[0].x,this.itBox[0].y,this.itBox[0].r,0,Math.PI*2)
+        context.fill()
+        context.closePath();
         context.restore();
     }
 
@@ -45,6 +56,11 @@ class Vehicule {
 
     setSpeed(a){
         this.vitesse = a * 0.65
+    }
+
+    nouveauTour(){
+        this.checkpoint = 0
+        this.nbtour += 1
     }
 
 }

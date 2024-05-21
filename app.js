@@ -8,6 +8,9 @@ let time = new Timer(50,90,0)
 
 plateau.creerCheckpoint();
 
+let start = new Image()
+start.src = "Start.png"
+
 function init() {
     context = document.getElementById("cvs").getContext("2d");
     context.width = document.getElementById("cvs").width;
@@ -16,10 +19,6 @@ function init() {
     document.addEventListener("keydown", captureAppuiToucheClavier)
     document.addEventListener("keyup", captureRelacheToucheClavier)
 
-
-    
-    
-
     boucleDeJeu();
 }
 
@@ -27,7 +26,9 @@ function init() {
 let Datenew = Date.now()
 function boucleDeJeu() {
 
-    update(Date.now()-Datenew);    
+    if (plateau.estStart){
+        update(Date.now()-Datenew);  
+    }
 
     render();
     
@@ -37,6 +38,7 @@ function boucleDeJeu() {
 
 function update(dt) {
     
+    plateau.colision()
     plateau.vehicules[0].update(dt)
     time.update(dt)
 
@@ -47,20 +49,26 @@ function render() {
 
     context.clearRect(0, 0, context.width, context.height);
 
+    if (plateau.estStart){
 
-    plateau.render(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540);
+        plateau.render(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540);
 
-    plateau.renderObstacle(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540)
+        plateau.renderObstacle(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540)
 
-    time.render(context)
-    
-    for(let i=0;i<plateau.vehicules.length;i++){
-        plateau.vehicules[i].render(context);
+        time.render(context)
+        
+        for(let i=0;i<plateau.vehicules.length;i++){
+            plateau.vehicules[i].render(context);
+        }
+
+        context.save()
+        context.font = "50px Arial "
+        context.fillText(""+plateau.vehicules[0].checkpoint,500,500)
+        context.restore()
+        
+    } else {
+        context.drawImage(start,0,0,1920,1080)
     }
-
-    context.font = "50px Arial "
-    context.fillText("x : "+Math.floor(plateau.vehicules[0].position.x)+" y : "+Math.floor(plateau.vehicules[0].position.y),1500,90)
-
     
 }
 
@@ -78,7 +86,9 @@ function captureAppuiToucheClavier(event) {
     }
     if (event.code == "ArrowRight"){
         plateau.vehicules[0].tourner(1)
-
+    }
+    if (event.code == "Enter" && plateau.estStart == false){
+        plateau.estStart = true
     }
 
 }

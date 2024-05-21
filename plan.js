@@ -8,6 +8,7 @@ class Plan {
         this.vehicules = [];
         this.longueur = this.image.height;
         this.largeur = this.image.width;
+        this.estStart = false;
     }
 
     render(context,x,y){
@@ -29,6 +30,14 @@ class Plan {
     renderObstacle(context,x,y){
         for (let i=0;i<this.obstacles.length;i++){
             this.obstacles[i].render(context,x,y)
+        }
+    }
+
+    colision(){
+        for(let i=0;i<this.vehicules.length;i++){
+            for(let j=0;j<this.obstacles.length;j++){
+                this.obstacles[j].estEnColision(this.vehicules[i])
+            }
         }
     }
 
