@@ -9,6 +9,7 @@ class Plan {
         this.longueur = this.image.height;
         this.largeur = this.image.width;
         this.estStart = false;
+        this.victoire = false;
     }
 
     render(context,x,y){
@@ -33,10 +34,18 @@ class Plan {
         }
     }
 
-    colision(){
+    colision(timer){
         for(let i=0;i<this.vehicules.length;i++){
             for(let j=0;j<this.obstacles.length;j++){
-                this.obstacles[j].estEnColision(this.vehicules[i])
+                this.obstacles[j].estEnColision(this.vehicules[i],timer)
+            }
+        }
+    }
+
+    verifSiVictoir(){
+        for(let i=0;i<this.vehicules.length;i++){
+            if (this.vehicules[i].nbtour == 3){
+                this.victoire = true
             }
         }
     }

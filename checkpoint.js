@@ -44,22 +44,22 @@ class Checkpoint extends Obstacle {
         
     }
 
-    actionColision(vehicule){
+    actionColision(vehicule,timer){
         if(vehicule.checkpoint == this.num-1){
             vehicule.checkpoint = this.num
         } else if(vehicule.checkpoint == 10 && this.num == 0){
-            vehicule.nouveauTour()
+            vehicule.nouveauTour(timer)
         }
     }
 
-    estEnColision(vehicule){
+    estEnColision(vehicule,timer){
         for (let i=0;i<this.itBox.length;i++){
             for (let j=0;j<vehicule.itBox.length;j++){
                 let dx = this.itBox[i].x - (vehicule.itBox[j].x + vehicule.position.x)
                 let dy = this.itBox[i].y - (vehicule.itBox[j].y + vehicule.position.y)
                 let distance = Math.sqrt(dx * dx + dy * dy)
                 if (distance < this.itBox[i].r + vehicule.itBox[j].r){
-                    this.actionColision(vehicule)
+                    this.actionColision(vehicule,timer)
                 }
             }
         }

@@ -11,6 +11,9 @@ plateau.creerCheckpoint();
 let start = new Image()
 start.src = "Start.png"
 
+let victori = new Image()
+victori.src = "Victoire.png"
+
 function init() {
     context = document.getElementById("cvs").getContext("2d");
     context.width = document.getElementById("cvs").width;
@@ -38,10 +41,13 @@ function boucleDeJeu() {
 
 function update(dt) {
     
-    plateau.colision()
-    plateau.vehicules[0].update(dt)
-    time.update(dt)
+    plateau.verifSiVictoir()
 
+    if (plateau.victoire == false){
+        plateau.colision(time.milSec)
+        plateau.vehicules[0].update(dt)
+        time.update(dt)
+    }
     
 }
 
@@ -49,21 +55,28 @@ function render() {
 
     context.clearRect(0, 0, context.width, context.height);
 
-    if (plateau.estStart){
+    if (plateau.estStart && plateau.victoire == false){
 
         plateau.render(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540);
 
         plateau.renderObstacle(context,plateau.vehicules[0].position.x-960,plateau.vehicules[0].position.y-540)
 
-        time.render(context)
-        
         for(let i=0;i<plateau.vehicules.length;i++){
             plateau.vehicules[i].render(context);
         }
         
-    } else {
+    } else if (plateau.victoire == false){
         context.drawImage(start,0,0,1920,1080)
+
+    } else {
+        context.drawImage(victori,0,0,1920,1080)
+        time.render(context)
     }
+
+    time.render(context)
+        plateau.vehicules[0].timer1.render(context)
+        plateau.vehicules[0].timer2.render(context)
+        plateau.vehicules[0].timer3.render(context)
     
 }
 

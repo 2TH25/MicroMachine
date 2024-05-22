@@ -20,7 +20,9 @@ class Vehicule {
         this.nbtour = 0; //entier
         this.checkpoint = 0;//entier
         this.itBox = [{x:10,y:0,r:50}]
-
+        this.timer1 = new Timer(50,180,0)
+        this.timer2 = new Timer(50,270,0)
+        this.timer3 = new Timer(50,360,0)
     }
 
     update(dt){
@@ -53,9 +55,18 @@ class Vehicule {
         this.vitesse = a * 0.65
     }
 
-    nouveauTour(){
+    nouveauTour(timer){
         this.checkpoint = 0
         this.nbtour += 1
+        if (this.nbtour == 1){
+            this.timer1.milSec = timer
+        } 
+        if (this.nbtour == 2){
+            this.timer2.milSec = timer - this.timer1.milSec
+        }
+        if (this.nbtour == 3){
+            this.timer3.milSec = timer - this.timer2.milSec - this.timer1.milSec
+        }
     }
 
 }
