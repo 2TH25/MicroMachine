@@ -3,7 +3,7 @@ class Checkpoint extends Obstacle {
     constructor(n){
         switch (n) {
             case 0:
-                super(6900,2500,500,500,[{x:6900,y:2500,r:500}])
+                super(7400,2500,500,500,[{x:7400,y:2500,r:500}])
                 break;
             case 1:
                 super(11200,4000,500,500,[{x:11200,y:4000,r:500}])
