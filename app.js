@@ -60,11 +60,6 @@ function render() {
         for(let i=0;i<plateau.vehicules.length;i++){
             plateau.vehicules[i].render(context);
         }
-
-        context.save()
-        context.font = "50px Arial "
-        context.fillText(""+plateau.vehicules[0].checkpoint,500,500)
-        context.restore()
         
     } else {
         context.drawImage(start,0,0,1920,1080)

@@ -42,11 +42,6 @@ class Vehicule {
         context.translate(960,540);
         context.rotate(this.angle * Math.PI/180);
         context.drawImage(this.image,-this.longueur/2,-this.hauteur/2,this.longueur,this.hauteur);
-        context.beginPath();
-        context.fillStyle = "red"
-        context.arc(this.itBox[0].x,this.itBox[0].y,this.itBox[0].r,0,Math.PI*2)
-        context.fill()
-        context.closePath();
         context.restore();
     }
 
